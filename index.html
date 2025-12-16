@@ -1042,15 +1042,22 @@
         }
     
 </script>
+
 <script>
 (function(){
-  const path = (window.location.pathname || ).replace(//+$/, );
-  let pageId = home;
-  if (path.endsWith("/about") || path.endsWith("/about/index.html")) pageId = about;
-  else if (path.endsWith("/programs") || path.endsWith("/programs/index.html")) pageId = programs;
-  else if (path.endsWith("/contact") || path.endsWith("/contact/index.html")) pageId = contact;
-  if (typeof navigate === function) navigate(null, pageId);
+  try {
+    var path = (window.location.pathname || '').replace(/\/+$/, '');
+    var pageId = 'home';
+    if (path.endsWith('/about') || path.endsWith('/about/index.html')) pageId = 'about';
+    else if (path.endsWith('/programs') || path.endsWith('/programs/index.html')) pageId = 'programs';
+    else if (path.endsWith('/contact') || path.endsWith('/contact/index.html')) pageId = 'contact';
+    else if (path.endsWith('/home') || path.endsWith('/home/index.html')) pageId = 'home';
+    window.addEventListener('DOMContentLoaded', function(){
+      if (typeof navigate === 'function') navigate({ preventDefault: function(){} }, pageId);
+    });
+  } catch(e) { /* no-op */ }
 })();
 </script>
+
 </body>
 </html>
