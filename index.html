@@ -29,9 +29,12 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Libraries -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.tailwindcss.com">
+</script>
+    <script src="https://unpkg.com/lucide@latest">
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
+</script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -176,7 +179,7 @@
             <!-- Top Bar (Always Visible) -->
             <div class="flex items-center justify-between w-full lg:w-auto">
                 <!-- Logo -->
-                <a href="#" onclick="navigate(event, 'home')" class="flex items-center gap-3 group shrink-0 magnetic-btn">
+                <a href="/home/" class="flex items-center gap-3 group shrink-0 magnetic-btn">
                     <img src="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png" 
                          alt="Logo" 
                          class="h-12 w-auto object-contain shadow-sm group-hover:rotate-6 transition-transform duration-500">
@@ -191,16 +194,16 @@
 
             <!-- Desktop Nav (Hidden on Mobile) -->
             <nav class="hidden lg:flex items-center gap-1">
-                <a href="#home" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="home">Home</a>
-                <a href="#about" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link whitespace-nowrap" data-target="about">About Us</a>
-                <a href="#programs" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="programs">Programs</a>
-                <a href="#contact" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="contact">Contact</a>
+                <a href="/home/" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="home">Home</a>
+                <a href="/about/" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link whitespace-nowrap" data-target="about">About Us</a>
+                <a href="/programs/" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="programs">Programs</a>
+                <a href="/contact/" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="contact">Contact</a>
                 <a href="https://square.link/u/OQowKsqR" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#86868B] hover:text-[#0C2340] hover:bg-black/5 transition-all">Donate</a>
             </nav>
 
             <!-- Desktop CTA (Hidden on Mobile) -->
             <div class="hidden lg:flex items-center gap-3">
-                <a href="#contact" class="hidden md:inline-flex items-center justify-center rounded-full text-[13px] font-bold h-10 px-6 shadow-lg magnetic-btn btn-brand">
+                <a href="/contact/" class="hidden md:inline-flex items-center justify-center rounded-full text-[13px] font-bold h-10 px-6 shadow-lg magnetic-btn btn-brand">
                     Get In Touch
                 </a>
             </div>
@@ -211,11 +214,11 @@
                 <div class="h-px w-full bg-slate-200 my-2"></div>
                 
                 <nav class="flex flex-col text-center space-y-2 pb-4">
-                    <a href="#home" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="home">Home</a>
-                    <a href="#about" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="about">About Us</a>
-                    <a href="#programs" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="programs">Programs</a>
+                    <a href="/home/" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="home">Home</a>
+                    <a href="/about/" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="about">About Us</a>
+                    <a href="/programs/" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="programs">Programs</a>
                     <a href="https://square.link/u/OQowKsqR" target="_blank" rel="noopener noreferrer" class="nav-mobile-link block py-3 text-lg font-bold text-[#D4AF37] hover:bg-black/5 rounded-xl">Donate</a>
-                    <a href="#contact" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="contact">Contact</a>
+                    <a href="/contact/" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="contact">Contact</a>
                 </nav>
             </div>
         </div>
@@ -259,10 +262,10 @@
                         A holistic support system tailored for justice-involved individuals to rebuild with dignity.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6">
-                        <a href="#programs" class="magnetic-btn px-10 py-4 rounded-full font-bold text-lg shadow-xl pointer-events-auto btn-brand">
+                        <a href="/programs/" class="magnetic-btn px-10 py-4 rounded-full font-bold text-lg shadow-xl pointer-events-auto btn-brand">
                             Explore Our Programs
                         </a>
-                        <a href="#about" class="magnetic-btn glass-panel text-[#0C2340] px-10 py-4 rounded-full font-bold text-lg hover:bg-white/80 hover:text-[#D4AF37] hover:scale-105 transition-all shadow-xl pointer-events-auto">
+                        <a href="/about/" class="magnetic-btn glass-panel text-[#0C2340] px-10 py-4 rounded-full font-bold text-lg hover:bg-white/80 hover:text-[#D4AF37] hover:scale-105 transition-all shadow-xl pointer-events-auto">
                             Learn More
                         </a>
                     </div>
@@ -335,7 +338,7 @@
                                     <li class="flex items-start gap-3"><span class="text-[#D4AF37] font-bold text-xl">✓</span><span>Reduced risk of recidivism</span></li>
                                 </ul>
                             </div>
-                            <a href="#" onclick="navigate(event, 'programs')" class="magnetic-btn inline-block bg-white text-[#0C2340] px-10 py-4 rounded-full font-bold text-sm hover:bg-[#D4AF37] hover:text-[#0C2340] transition-colors shadow-lg shadow-white/10">
+                            <a href="/programs/" class="magnetic-btn inline-block bg-white text-[#0C2340] px-10 py-4 rounded-full font-bold text-sm hover:bg-[#D4AF37] hover:text-[#0C2340] transition-colors shadow-lg shadow-white/10">
                                 Learn More
                             </a>
                         </div>
@@ -350,14 +353,14 @@
                                     <li class="flex items-start gap-3"><span class="text-[#D4AF37] font-bold text-xl">✓</span><span>Career placement assistance</span></li>
                                 </ul>
                             </div>
-                            <a href="#" onclick="navigate(event, 'programs')" class="magnetic-btn inline-block bg-[#D4AF37] text-[#0C2340] px-10 py-4 rounded-full font-bold text-sm hover:bg-white transition-colors shadow-lg shadow-blue-500/40">
+                            <a href="/programs/" class="magnetic-btn inline-block bg-[#D4AF37] text-[#0C2340] px-10 py-4 rounded-full font-bold text-sm hover:bg-white transition-colors shadow-lg shadow-blue-500/40">
                                 Learn More
                             </a>
                         </div>
                     </div>
                     
                      <div class="relative z-10 text-center mt-16">
-                        <a href="#" onclick="navigate(event, 'programs')" class="magnetic-btn inline-block bg-white/10 text-white border border-white/20 px-12 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#0C2340] transition-colors shadow-lg backdrop-blur-md">
+                        <a href="/programs/" class="magnetic-btn inline-block bg-white/10 text-white border border-white/20 px-12 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#0C2340] transition-colors shadow-lg backdrop-blur-md">
                             View All Programs
                         </a>
                     </div>
@@ -651,7 +654,7 @@
                 <div class="glass-panel-dark p-12 rounded-[3rem] shadow-2xl">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Get Started?</h2>
                     <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10">Contact us today to learn more about our programs and how we can support your journey to a brighter future.</p>
-                    <a href="#" onclick="navigate(event, 'contact')" class="magnetic-btn inline-block bg-[#D4AF37] text-[#0C2340] px-12 py-4 rounded-full font-bold text-lg hover:bg-white transition-colors shadow-lg">
+                    <a href="/contact/" class="magnetic-btn inline-block bg-[#D4AF37] text-[#0C2340] px-12 py-4 rounded-full font-bold text-lg hover:bg-white transition-colors shadow-lg">
                         Get In Touch
                     </a>
                 </div>
@@ -785,9 +788,9 @@
                 <div>
                     <h4 class="font-bold mb-6 text-[#0C2340]">Quick Links</h4>
                     <ul class="space-y-4 text-sm font-medium text-slate-500">
-                        <li><a href="#" onclick="navigate(event, 'home')" class="hover:text-[#D4AF37] transition-colors">Home</a></li>
-                        <li><a href="#" onclick="navigate(event, 'about')" class="hover:text-[#D4AF37] transition-colors">About</a></li>
-                        <li><a href="#" onclick="navigate(event, 'programs')" class="hover:text-[#D4AF37] transition-colors">Programs</a></li>
+                        <li><a href="/home/" class="hover:text-[#D4AF37] transition-colors">Home</a></li>
+                        <li><a href="/about/" class="hover:text-[#D4AF37] transition-colors">About</a></li>
+                        <li><a href="/programs/" class="hover:text-[#D4AF37] transition-colors">Programs</a></li>
                     </ul>
                 </div>
                 <div>
@@ -934,7 +937,7 @@
         // Navigation Logic
         function navigate(event, pageId) {
             // Prevent default anchor behavior
-            event.preventDefault();
+            if (event && event.preventDefault) event.preventDefault();
 
             // If mobile menu is open, close it
             if(isMenuOpen) toggleMobileMenu();
@@ -1020,7 +1023,7 @@
 
         // Contact Form
         function handleFormSubmit(event) {
-            event.preventDefault();
+            if (event && event.preventDefault) event.preventDefault();
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
@@ -1037,6 +1040,17 @@
             homeLink.classList.remove('text-[#86868B]');
             homeLink.classList.add('text-[#0C2340]');
         }
-    </script>
+    
+</script>
+<script>
+(function(){
+  const path = (window.location.pathname || ).replace(//+$/, );
+  let pageId = home;
+  if (path.endsWith("/about") || path.endsWith("/about/index.html")) pageId = about;
+  else if (path.endsWith("/programs") || path.endsWith("/programs/index.html")) pageId = programs;
+  else if (path.endsWith("/contact") || path.endsWith("/contact/index.html")) pageId = contact;
+  if (typeof navigate === function) navigate(null, pageId);
+})();
+</script>
 </body>
 </html>
