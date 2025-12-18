@@ -32,8 +32,8 @@
     <meta property="twitter:description" content="Empowering justice-involved individuals via workforce training, housing, & mental health support. Building second chances in South Florida.">
     <meta property="twitter:image" content="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
     <meta property="twitter:image:alt" content="52 Weeks Development Logo">
-     
-     
+    
+    
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -465,11 +465,15 @@
 
         <!-- ABOUT VIEW -->
         <div id="about-view" class="page-view hidden fade-in-up">
-            <section class="w-full max-w-[1400px] mx-auto px-4 py-24 text-center">
-                <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340]">About 52 Weeks Development</h1>
-                <p class="text-2xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed">
-                    Redeveloping individuals and communities through second chance opportunities.
-                </p>
+            <!-- Consistent Hero Section for About -->
+            <section class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 mb-16 relative flex items-center justify-center">
+                <div class="relative w-full max-w-[95%] lg:max-w-5xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl z-0 glass-panel flex flex-col items-center justify-center text-center p-6 md:p-12">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 z-0 pointer-events-none"></div>
+                    <h1 class="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340] relative z-10">About Us</h1>
+                    <p class="text-lg md:text-2xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed relative z-10">
+                        Redeveloping individuals and communities through second chance opportunities.
+                    </p>
+                </div>
             </section>
 
             <section class="w-full max-w-[1200px] mx-auto px-6 mb-24">
@@ -502,9 +506,13 @@
 
         <!-- PROGRAMS VIEW -->
         <div id="programs-view" class="page-view hidden fade-in-up">
-            <section class="w-full max-w-[1400px] mx-auto px-4 py-24 text-center">
-                <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340]">Our Programs</h1>
-                <p class="text-2xl text-slate-600 max-w-4xl mx-auto font-medium">Redeveloping individuals and communities through second chance opportunities.</p>
+            <!-- Consistent Hero Section for Programs -->
+            <section class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 mb-16 relative flex items-center justify-center">
+                <div class="relative w-full max-w-[95%] lg:max-w-5xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl z-0 glass-panel flex flex-col items-center justify-center text-center p-6 md:p-12">
+                     <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 z-0 pointer-events-none"></div>
+                    <h1 class="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340] relative z-10">Our Programs</h1>
+                    <p class="text-lg md:text-2xl text-slate-600 max-w-4xl mx-auto font-medium relative z-10">Redeveloping individuals and communities through second chance opportunities.</p>
+                </div>
             </section>
 
             <section class="w-full max-w-[1200px] mx-auto px-6 mb-24">
@@ -729,9 +737,13 @@
 
         <!-- CONTACT VIEW -->
         <div id="contact-view" class="page-view hidden fade-in-up">
-            <section class="w-full max-w-[1400px] mx-auto px-4 py-24 text-center">
-                <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340]">Contact Us</h1>
-                <p class="text-2xl text-slate-600 max-w-3xl mx-auto font-medium">We're here to help you get involved.</p>
+            <!-- Consistent Hero Section for Contact -->
+            <section class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 mb-16 relative flex items-center justify-center">
+                <div class="relative w-full max-w-[95%] lg:max-w-5xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl z-0 glass-panel flex flex-col items-center justify-center text-center p-6 md:p-12">
+                     <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 z-0 pointer-events-none"></div>
+                    <h1 class="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340] relative z-10">Contact Us</h1>
+                    <p class="text-lg md:text-2xl text-slate-600 max-w-3xl mx-auto font-medium relative z-10">We're here to help you get involved.</p>
+                </div>
             </section>
 
             <section class="w-full max-w-[1200px] mx-auto px-6 mb-24">
@@ -956,11 +968,21 @@
         // Intro Sequence Logic
         window.addEventListener('load', () => {
             const videoWrapper = document.getElementById('hero-video-wrapper');
+            const video = document.getElementById('intro-video');
             const content = document.getElementById('hero-content');
             
-            // Immediately show content, do not fade out video
-            content.classList.remove('opacity-0');
-            content.classList.remove('pointer-events-none');
+            if (video) {
+                // Ensure content is hidden initially (CSS handles this, but good to be sure)
+                
+                video.addEventListener('ended', () => {
+                    video.classList.add('opacity-0'); // Fade out video
+                    
+                    if (content) {
+                        content.classList.remove('opacity-0'); // Fade in text
+                        content.classList.remove('pointer-events-none'); // Make text clickable
+                    }
+                });
+            }
         });
 
         // Mobile Menu Logic (Accordion Style)
