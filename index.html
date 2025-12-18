@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+    <link rel="manifest" href="/site.webmanifest">
     <!-- SEO & Metadata -->
     <title>52 Weeks Development | Second Chance & Community Reentry</title>
     <meta name="description" content="Empowering justice-involved individuals via workforce training, housing, & mental health support in Broward/Dade. 52 Weeks Development: Building second chances.">
@@ -33,11 +33,7 @@
     <meta property="twitter:image" content="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
     <meta property="twitter:image:alt" content="52 Weeks Development Logo">
     
-    <!-- Favicon & Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
-    <link rel="manifest" href="/site.webmanifest">
+    
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -315,12 +311,22 @@
                 
                 <!-- Video Intro Layer -->
                 <div id="hero-video-wrapper" class="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white">
+                    <!-- Desktop Video (iframe) -->
                     <iframe 
-                        src="https://player.cloudinary.com/embed/?cloud_name=dlqudkksg&public_id=aHR0cHM6Ly9hc3NldHMuZ3Jvay5jb20vdXNlcnMvNDRmOWZmMzEtYzVhYy00NDBiLThjMmItZmYzNzcwMWJjNDJhL2dlbmVyYXRlZC84MTEyZWU0Ni00OTNhLTQwMzQtYjhmYi0xMDBiNTQ5ZTBmZGMvZ2VuZXJhdGVkX3ZpZGVvLm1wNA_itrvyy&profile=cld-default&autoplay=true&muted=true&loop=false&controls=false&cb=20251217-0312"
-                        class="absolute inset-0 w-full h-full object-cover pointer-events-none scale-[1.42]" 
+                        src="https://player.cloudinary.com/embed/?cloud_name=dlqudkksg&public_id=copy_56D11E0F-0392-4CA9-A4C3-142F7991AFF1_zutpmf&profile=cld-default&autoplay=true&muted=true&loop=false&controls=false&hide_controls=true"
+                        class="hidden lg:block absolute inset-0 w-full h-full object-cover pointer-events-none scale-[1.02]" 
                         allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
                         frameborder="0">
                     </iframe>
+
+                    <!-- Mobile/Tablet Video (Original) -->
+                    <iframe 
+                        src="https://player.cloudinary.com/embed/?cloud_name=dlqudkksg&public_id=aHR0cHM6Ly9hc3NldHMuZ3Jvay5jb20vdXNlcnMvNDRmOWZmMzEtYzVhYy00NDBiLThjMmItZmYzNzcwMWJjNDJhL2dlbmVyYXRlZC84MTEyZWU0Ni00OTNhLTQwMzQtYjhmYi0xMDBiNTQ5ZTBmZGMvZ2VuZXJhdGVkX3ZpZGVvLm1wNA_itrvyy&profile=cld-default&autoplay=true&muted=true&loop=false&controls=false&cb=20251217-0312"
+                        class="lg:hidden absolute inset-0 w-full h-full object-cover pointer-events-none scale-[1.42]" 
+                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
+                        frameborder="0">
+                    </iframe>
+                    
                     <div class="absolute inset-0 bg-black/10"></div>
                 </div>
 
