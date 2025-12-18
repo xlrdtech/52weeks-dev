@@ -311,11 +311,11 @@
                 
                 <!-- Video Intro Layer (Container) -->
                 <!-- Enforce 16:9 aspect ratio wrapper that constrains both video and content -->
-                <div id="hero-video-wrapper" class="relative w-full max-w-[95%] lg:max-w-5xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white">
-                    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                <div id="hero-video-wrapper" class="relative w-full max-w-[95%] lg:max-w-5xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-black">
+                    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-contain">
                         <source src="https://res.cloudinary.com/dlqudkksg/video/upload/v1766016103/copy_68F53FA4-92F7-4057-A682-613BD1B64663_nwp6ge.mov" type="video/mp4">
                     </video>
-                    <div class="absolute inset-0 bg-black/10"></div>
+                    <!-- Removed overlay to ensure video clarity -->
 
                     <!-- Text Content Layer (Overlay) -->
                     <div id="hero-content" class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center opacity-0 transition-opacity duration-[1500ms] pointer-events-none p-6 md:p-12">
