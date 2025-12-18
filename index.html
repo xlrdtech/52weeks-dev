@@ -310,23 +310,10 @@
             <section class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 mb-16 relative min-h-[85vh] flex items-center justify-center">
                 
                 <!-- Video Intro Layer -->
-                <div id="hero-video-wrapper" class="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white">
-                    <!-- Desktop Video (iframe) -->
-                    <iframe 
-                        src="https://player.cloudinary.com/embed/?cloud_name=dlqudkksg&public_id=copy_56D11E0F-0392-4CA9-A4C3-142F7991AFF1_zutpmf&profile=cld-default&autoplay=true&muted=true&loop=false&controls=false&hide_controls=true"
-                        class="hidden lg:block absolute inset-0 w-full h-full object-cover pointer-events-none scale-[1.02]" 
-                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
-                        frameborder="0">
-                    </iframe>
-
-                    <!-- Mobile/Tablet Video (Original) -->
-                    <iframe 
-                        src="https://player.cloudinary.com/embed/?cloud_name=dlqudkksg&public_id=aHR0cHM6Ly9hc3NldHMuZ3Jvay5jb20vdXNlcnMvNDRmOWZmMzEtYzVhYy00NDBiLThjMmItZmYzNzcwMWJjNDJhL2dlbmVyYXRlZC84MTEyZWU0Ni00OTNhLTQwMzQtYjhmYi0xMDBiNTQ5ZTBmZGMvZ2VuZXJhdGVkX3ZpZGVvLm1wNA_itrvyy&profile=cld-default&autoplay=true&muted=true&loop=false&controls=false&cb=20251217-0312"
-                        class="lg:hidden absolute inset-0 w-full h-full object-cover pointer-events-none scale-[1.42]" 
-                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
-                        frameborder="0">
-                    </iframe>
-                    
+                <div id="hero-video-wrapper" class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full max-w-[95%] lg:max-w-5xl rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white">
+                    <video autoplay muted loop playsinline class="w-full h-auto block">
+                        <source src="https://res.cloudinary.com/dlqudkksg/video/upload/v1766016103/copy_68F53FA4-92F7-4057-A682-613BD1B64663_nwp6ge.mov" type="video/mp4">
+                    </video>
                     <div class="absolute inset-0 bg-black/10"></div>
                 </div>
 
