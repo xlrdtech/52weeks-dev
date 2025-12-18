@@ -34,6 +34,7 @@
     <meta property="twitter:image:alt" content="52 Weeks Development Logo">
     
     
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
@@ -95,9 +96,12 @@
     </script>
 
     <!-- Libraries -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.tailwindcss.com">
+</script>
+    <script src="https://unpkg.com/lucide@latest">
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
+</script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -849,7 +853,7 @@
                 <div>
                     <h4 class="font-bold mb-6 text-[#0C2340]">Quick Links</h4>
                     <ul class="space-y-4 text-sm font-medium text-slate-500">
-                        <li><a href="/home/" class="hover:text-[#D4AF37] transition-colors">Home</a></li>
+                        <li><a href="/" class="hover:text-[#D4AF37] transition-colors">Home</a></li>
                         <li><a href="/about/" class="hover:text-[#D4AF37] transition-colors">About</a></li>
                         <li><a href="/programs/" class="hover:text-[#D4AF37] transition-colors">Programs</a></li>
                     </ul>
@@ -953,15 +957,9 @@
             const videoWrapper = document.getElementById('hero-video-wrapper');
             const content = document.getElementById('hero-content');
             
-            // Wait 6 seconds for intro video to play, then transition
-            setTimeout(() => {
-                // Fade video out (Removed for new design where video stays visible)
-                // videoWrapper.classList.add('opacity-0'); 
-                
-                // Fade content in
-                content.classList.remove('opacity-0');
-                content.classList.remove('pointer-events-none');
-            }, 6000); 
+            // Immediately show content, do not fade out video
+            content.classList.remove('opacity-0');
+            content.classList.remove('pointer-events-none');
         });
 
         // Mobile Menu Logic (Accordion Style)
@@ -1102,23 +1100,23 @@
             homeLink.classList.add('text-[#0C2340]');
         }
     
-    </script>
+</script>
 
-    <script>
-    (function(){
-      try {
-        var path = (window.location.pathname || '').replace(/\/+$/, '');
-        var pageId = 'home';
-        if (path.endsWith('/about') || path.endsWith('/about/index.html')) pageId = 'about';
-        else if (path.endsWith('/programs') || path.endsWith('/programs/index.html')) pageId = 'programs';
-        else if (path.endsWith('/contact') || path.endsWith('/contact/index.html')) pageId = 'contact';
-        else if (path.endsWith('/home') || path.endsWith('/home/index.html')) pageId = 'home';
-        window.addEventListener('DOMContentLoaded', function(){
-          if (typeof navigate === 'function') navigate({ preventDefault: function(){} }, pageId);
-        });
-      } catch(e) { /* no-op */ }
-    })();
-    </script>
+<script>
+(function(){
+  try {
+    var path = (window.location.pathname || '').replace(/\/+$/, '');
+    var pageId = 'home';
+    if (path.endsWith('/about') || path.endsWith('/about/index.html')) pageId = 'about';
+    else if (path.endsWith('/programs') || path.endsWith('/programs/index.html')) pageId = 'programs';
+    else if (path.endsWith('/contact') || path.endsWith('/contact/index.html')) pageId = 'contact';
+    else if (path.endsWith('/home') || path.endsWith('/home/index.html')) pageId = 'home';
+    window.addEventListener('DOMContentLoaded', function(){
+      if (typeof navigate === 'function') navigate({ preventDefault: function(){} }, pageId);
+    });
+  } catch(e) { /* no-op */ }
+})();
+</script>
 
 </body>
 </html>
