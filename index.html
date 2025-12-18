@@ -310,25 +310,26 @@
             <section class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 mb-16 relative flex items-center justify-center">
                 
                 <!-- Video Intro Layer (Container) -->
-                <div id="hero-video-wrapper" class="relative w-full max-w-[95%] lg:max-w-5xl rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white">
-                    <video autoplay muted loop playsinline class="w-full h-auto block">
+                <!-- Enforce 16:9 aspect ratio wrapper that constrains both video and content -->
+                <div id="hero-video-wrapper" class="relative w-full max-w-[95%] lg:max-w-5xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white">
+                    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
                         <source src="https://res.cloudinary.com/dlqudkksg/video/upload/v1766016103/copy_68F53FA4-92F7-4057-A682-613BD1B64663_nwp6ge.mov" type="video/mp4">
                     </video>
                     <div class="absolute inset-0 bg-black/10"></div>
 
                     <!-- Text Content Layer (Overlay) -->
                     <div id="hero-content" class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center opacity-0 transition-opacity duration-[1500ms] pointer-events-none p-6 md:p-12">
-                        <h1 class="text-2xl md:text-5xl lg:text-7xl font-extrabold text-[#0C2340] tracking-tight mb-4 md:mb-8 leading-[1.2] max-w-5xl mx-auto drop-shadow-sm">
+                        <h1 class="text-2xl md:text-4xl lg:text-6xl font-extrabold text-[#0C2340] tracking-tight mb-2 md:mb-6 leading-[1.2] max-w-4xl mx-auto drop-shadow-sm">
                             Developing individuals and communities through <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0071E3] to-cyan-400">second chance</span> opportunities.
                         </h1>
-                        <p class="text-sm md:text-xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed mb-6 md:mb-12 hidden sm:block">
+                        <p class="text-xs md:text-lg text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed mb-4 md:mb-8 hidden sm:block">
                             A holistic support system tailored for justice-involved individuals to rebuild with dignity.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4 md:gap-6 scale-90 md:scale-100">
-                            <a href="/programs/" class="magnetic-btn px-6 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl pointer-events-auto btn-brand">
+                        <div class="flex flex-col sm:flex-row gap-3 md:gap-5 scale-90 md:scale-100">
+                            <a href="/programs/" class="magnetic-btn px-5 py-2.5 md:px-8 md:py-3 rounded-full font-bold text-xs md:text-base shadow-xl pointer-events-auto btn-brand">
                                 Explore Our Programs
                             </a>
-                            <a href="/about/" class="magnetic-btn glass-panel text-[#0C2340] px-6 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg hover:bg-white/80 hover:text-[#D4AF37] hover:scale-105 transition-all shadow-xl pointer-events-auto">
+                            <a href="/about/" class="magnetic-btn glass-panel text-[#0C2340] px-5 py-2.5 md:px-8 md:py-3 rounded-full font-bold text-xs md:text-base hover:bg-white/80 hover:text-[#D4AF37] hover:scale-105 transition-all shadow-xl pointer-events-auto">
                                 Learn More
                             </a>
                         </div>
