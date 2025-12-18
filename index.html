@@ -32,8 +32,8 @@
     <meta property="twitter:description" content="Empowering justice-involved individuals via workforce training, housing, & mental health support. Building second chances in South Florida.">
     <meta property="twitter:image" content="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
     <meta property="twitter:image:alt" content="52 Weeks Development Logo">
-    
-    
+     
+     
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -96,12 +96,9 @@
     </script>
 
     <!-- Libraries -->
-    <script src="https://cdn.tailwindcss.com">
-</script>
-    <script src="https://unpkg.com/lucide@latest">
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
-</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -311,14 +308,18 @@
                 
                 <!-- Video Intro Layer (Container) -->
                 <!-- Enforce 16:9 aspect ratio wrapper that constrains both video and content -->
-                <div id="hero-video-wrapper" class="relative w-full max-w-[95%] lg:max-w-5xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-black">
-                    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-contain">
+                <div id="hero-video-wrapper" class="relative w-full max-w-[95%] lg:max-w-5xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-all duration-[2000ms] glass-panel">
+                    
+                    <!-- Background for when video fades out -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 z-0"></div>
+
+                    <!-- Video (Added id, removed loop) -->
+                    <video id="intro-video" autoplay muted playsinline class="absolute inset-0 w-full h-full object-contain z-10 transition-opacity duration-[1500ms]">
                         <source src="https://res.cloudinary.com/dlqudkksg/video/upload/v1766016103/copy_68F53FA4-92F7-4057-A682-613BD1B64663_nwp6ge.mov" type="video/mp4">
                     </video>
-                    <!-- Removed overlay to ensure video clarity -->
 
                     <!-- Text Content Layer (Overlay) -->
-                    <div id="hero-content" class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center opacity-0 transition-opacity duration-[1500ms] pointer-events-none p-6 md:p-12">
+                    <div id="hero-content" class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center opacity-0 transition-opacity duration-[1500ms] pointer-events-none p-6 md:p-12">
                         <h1 class="text-2xl md:text-4xl lg:text-6xl font-extrabold text-[#0C2340] tracking-tight mb-2 md:mb-6 leading-[1.2] max-w-4xl mx-auto drop-shadow-sm">
                             Developing individuals and communities through <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0071E3] to-cyan-400">second chance</span> opportunities.
                         </h1>
