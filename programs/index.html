@@ -14,22 +14,21 @@
     <meta property="og:url" content="https://52weeks.dev/programs/">
     <meta property="og:title" content="52 Weeks Development | Second Chance Opportunities & Community Redevelopment">
     <meta property="og:description" content="Empowering justice-involved individuals through second chance opportunities. Providing workforce development, temporary housing, mental health support, and education in Broward and Dade Counties.">
-    <meta property="og:image" content="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
+    <meta property="og:image" content="/assets/images/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://52weeks.dev/programs/">
     <meta property="twitter:title" content="52 Weeks Development | Second Chance Opportunities & Community Redevelopment">
     <meta property="twitter:description" content="Empowering justice-involved individuals through second chance opportunities. Providing workforce development, temporary housing, mental health support, and education in Broward and Dade Counties.">
-    <meta property="twitter:image" content="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
+    <meta property="twitter:image" content="/assets/images/logo.png">
     <link rel="canonical" href="https://52weeks.dev/programs/">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
@@ -180,7 +179,7 @@
   "@type": "Organization",
   "name": "52 Weeks Development",
   "url": "https://52weeks.dev/",
-  "logo": "https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png",
+  "logo": "/assets/images/logo.png",
   "sameAs": [
     "https://instagram.com/52weeksdev",
     "https://x.com/52weeksdev"
@@ -224,9 +223,9 @@
             <div class="flex items-center justify-between w-full lg:w-auto">
                 <!-- Logo -->
                 <a href="/home/" class="flex items-center gap-3 group shrink-0 magnetic-btn">
-                    <img src="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png" 
+                    <img src="/assets/images/logo.png" 
                          alt="Logo" 
-                         class="h-12 w-auto object-contain shadow-sm group-hover:rotate-6 transition-transform duration-500" alt="52 Weeks Development logo">
+                         class="h-12 w-auto object-contain shadow-sm group-hover:rotate-6 transition-transform duration-500">
                 </a>
 
                 <!-- Mobile Toggle Button -->
@@ -288,13 +287,9 @@
                 
                 <!-- Video Intro Layer -->
                 <div id="hero-video-wrapper" class="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white">
-                    <iframe
-                        src="https://player.cloudinary.com/embed/?cloud_name=dlqudkksg&public_id=aHR0cHM6Ly9hc3NldHMuZ3Jvay5jb20vdXNlcnMvNDRmOWZmMzEtYzVhYy00NDBiLThjMmItZmYzNzcwMWJjNDJhL2dlbmVyYXRlZC84MTEyZWU0Ni00OTNhLTQwMzQtYjhmYi0xMDBiNTQ5ZTBmZGMvZ2VuZXJhdGVkX3ZpZGVvLm1wNA_itrvyy&profile=cld-default&autoplay=true&muted=true&loop=false&controls=false"
-                        class="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                        style="transform: scale(1.28); transform-origin: center;"
-                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-                        frameborder="0">
-                    </iframe>
+                    <video id="intro-video" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none" style="transform: scale(1.28); transform-origin: center;">
+                        <source src="/assets/videos/hero-video.mov" type="video/mp4">
+                    </video>
 </div>
 
                 <!-- Text Content Layer (Fades In After Video) -->
@@ -419,20 +414,20 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 h-auto md:h-[550px]">
-                    <div class="relative rounded-[2.5rem] overflow-hidden group h-[500px] md:h-full shadow-2xl shine-card cursor-pointer" onclick="openLightbox('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1392.JPG-rg56l2sLjzdUrxPqXjvbA8wmKzzvkw.jpeg')">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1392.JPG-rg56l2sLjzdUrxPqXjvbA8wmKzzvkw.jpeg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="relative rounded-[2.5rem] overflow-hidden group h-[500px] md:h-full shadow-2xl shine-card cursor-pointer" onclick="openLightbox('/assets/images/IMG_1392.jpg')">
+                        <img src="/assets/images/IMG_1392.jpg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0C2340]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                             <p class="text-[#D4AF37] font-bold text-xl">Graduation Day<br><span class="text-xs text-white/70 font-normal">Click to view full image</span></p>
                         </div>
                     </div>
-                    <div class="relative rounded-[2.5rem] overflow-hidden group h-[500px] md:h-full shadow-2xl shine-card cursor-pointer" onclick="openLightbox('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1397.JPG-kZQ8LWQqFYhmaC9A5iHdIkqtWLnYIf.jpeg')">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1397.JPG-kZQ8LWQqFYhmaC9A5iHdIkqtWLnYIf.jpeg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="relative rounded-[2.5rem] overflow-hidden group h-[500px] md:h-full shadow-2xl shine-card cursor-pointer" onclick="openLightbox('/assets/images/IMG_1397.jpg')">
+                        <img src="/assets/images/IMG_1397.jpg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0C2340]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                             <p class="text-[#D4AF37] font-bold text-xl">Classroom Skills<br><span class="text-xs text-white/70 font-normal">Click to view full image</span></p>
                         </div>
                     </div>
-                    <div class="relative rounded-[2.5rem] overflow-hidden group h-[500px] md:h-full shadow-2xl shine-card cursor-pointer" onclick="openLightbox('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1394.JPG-mXRKZqSev5RB42zBDBXph2DTvEm6OP.jpeg')">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1394.JPG-mXRKZqSev5RB42zBDBXph2DTvEm6OP.jpeg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="relative rounded-[2.5rem] overflow-hidden group h-[500px] md:h-full shadow-2xl shine-card cursor-pointer" onclick="openLightbox('/assets/images/IMG_1394.jpg')">
+                        <img src="/assets/images/IMG_1394.jpg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0C2340]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                             <p class="text-[#D4AF37] font-bold text-xl">Hands-on Training<br><span class="text-xs text-white/70 font-normal">Click to view full image</span></p>
                         </div>
@@ -457,7 +452,7 @@
                         52 Weeks Development exists to empower returning citizens by providing temporary housing, hands-on job training, apprenticeship opportunities, trauma-informed counseling, and career placement—helping them transition from incarceration to hope, stability, and opportunity.
                     </p>
                     <div class="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-lg">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1391.JPG-Afkt1HNUb0Ldf2QdjE16rHZIuxXb4O.jpeg" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="/assets/images/IMG_1391.jpg" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                 </div>
             </section>
@@ -598,14 +593,14 @@
                         </p>
                     </div>
                     <div class="h-[600px] lg:h-auto relative">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1395.JPG-bUG1bgRpmmpoaYv48hSzHUttK432S6.jpeg" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="/assets/images/IMG_1395.jpg" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                 </div>
 
                 <!-- Program 2: Workforce -->
                 <div class="glass-panel rounded-[3rem] overflow-hidden shadow-2xl grid lg:grid-cols-2 shine-card">
                     <div class="h-[600px] lg:h-auto relative order-2 lg:order-1">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1394.JPG-mXRKZqSev5RB42zBDBXph2DTvEm6OP.jpeg" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="/assets/images/IMG_1394.jpg" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     <div class="p-16 flex flex-col justify-center text-center lg:text-left order-1 lg:order-2">
                         <h2 class="text-4xl font-bold mb-6 text-[#0C2340]">Workforce Development & Job Training</h2>
@@ -660,14 +655,14 @@
                         </ul>
                     </div>
                     <div class="h-[500px] lg:h-auto relative">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1398.JPG-RHwT48d4dOFyprxyCkNF8lsmd2klic.jpeg" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="/assets/images/IMG_1398.jpg" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                 </div>
 
                 <!-- Program 4: Education -->
                 <div class="glass-panel rounded-[3rem] overflow-hidden shadow-2xl grid lg:grid-cols-2 shine-card">
                     <div class="h-[500px] lg:h-auto relative order-2 lg:order-1">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1392.JPG-rg56l2sLjzdUrxPqXjvbA8wmKzzvkw.jpeg" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="/assets/images/IMG_1392.jpg" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     <div class="p-16 flex flex-col justify-center text-center lg:text-left order-1 lg:order-2">
                         <h2 class="text-4xl font-bold mb-6 text-[#0C2340]">Educational Advancement</h2>
@@ -826,7 +821,7 @@
         <div class="max-w-7xl mx-auto px-6 py-20">
             <div class="grid md:grid-cols-4 gap-12 text-center md:text-left">
                 <div class="space-y-6 flex flex-col items-center md:items-start">
-                    <img src="https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png" class="h-24 w-auto object-contain" alt="52 Weeks Development logo">
+                    <img src="/assets/images/logo.png" class="h-24 w-auto object-contain" alt="52 Weeks Development logo">
                     <p class="text-sm text-slate-500 leading-relaxed font-medium">Redeveloping individuals and communities through second chance opportunities.</p>
                 </div>
                 <div>

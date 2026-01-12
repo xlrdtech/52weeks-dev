@@ -3,12 +3,12 @@
     "short_name": "52Weeks",
     "icons": [
         {
-            "src": "https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png",
+            "src": "/assets/images/logo.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "https://res.cloudinary.com/dlqudkksg/image/upload/v1765851909/Photoroom_20251215_212348_h4zvep.png",
+            "src": "/assets/images/logo.png",
             "sizes": "512x512",
             "type": "image/png"
         }
