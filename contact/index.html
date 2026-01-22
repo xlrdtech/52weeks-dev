@@ -998,32 +998,41 @@
         }
 
         // Contact Form - FIXED VERSION
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-                        e.preventDefault();
-
-                        const name = document.getElementById('name').value;
-                        const email = document.getElementById('email').value;
-                        const phone = document.getElementById('phone').value;
-                        const message = document.getElementById('message').value;
-
-                        const subject = encodeURIComponent(`New Contact from ${name}`);
-                        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage: ${message}`);
-
-                        // Create a temporary anchor element and click it
-                        const mailtoLink = document.createElement('a');
-                        mailtoLink.href = `mailto:waine@52weeks.dev?subject=${subject}&body=${body}`;
-                        mailtoLink.style.display = 'none';
-                        document.body.appendChild(mailtoLink);
-                        mailtoLink.click();
-
-                        // Clean up
-                        setTimeout(() => {
-                                            document.body.removeChild(mailtoLink);
-                        }, 100);
-
-                        return false;
-        });
-        // Set Home Active initially
+        // Contact Form - DEBUG VERSION
+                document.addEventListener('DOMContentLoaded', function() {
+                                console.log('DOM loaded, looking for form...');
+                                const form = document.getElementById('contact-form');
+                                
+                                if (!form) {
+                                                    console.error('ERROR: contact-form not found!');
+                                                    return;
+                                }
+                                
+                                console.log('Form found! Attaching event listener...');
+                                
+                                form.addEventListener('submit', function(e) {
+                                                    e.preventDefault();
+                                                    console.log('Form submitted!');
+                                                    
+                                                    const name = document.getElementById('name').value;
+                                                    const email = document.getElementById('email').value;
+                                                    const phone = document.getElementById('phone').value;
+                                                    const message = document.getElementById('message').value;
+                                                    
+                                                    console.log('Form data:', { name, email, phone, message });
+                                                    
+                                                    const subject = encodeURIComponent(`New Contact from ${name}`);
+                                                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage: ${message}`);
+                                                    const mailtoUrl = `mailto:waine@52weeks.dev?subject=${subject}&body=${body}`;
+                                                    
+                                                    console.log('Opening mailto:', mailtoUrl.substring(0, 100) + '...');
+                                                    
+                                                    // Use window.location.href as the simple approach
+                                                    window.location.href = mailtoUrl;
+                                });
+                                
+                                console.log('Event listener attached successfully!');
+                });// Set Home Active initially
         const homeLink = document.querySelector('[data-target="home"]');
         if (homeLink) {
             homeLink.classList.remove('text-[#86868B]');
@@ -1049,4 +1058,5 @@
 
 </body>
 </html>
+
 
