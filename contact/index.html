@@ -36,12 +36,9 @@
 
 
     <!-- Libraries -->
-    <script src="https://cdn.tailwindcss.com">
-</script>
-    <script src="https://unpkg.com/lucide@latest">
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
-</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -207,7 +204,6 @@
   }
 }
 </script>
-
 </head>
 <body class="bg-[#F2F2F7] relative">
 
@@ -223,23 +219,21 @@
             <div class="flex items-center justify-between w-full lg:w-auto">
                 <!-- Logo -->
                 <a href="/home/" class="flex items-center gap-3 group shrink-0 magnetic-btn">
-                    <img src="/assets/images/logo.png" 
-                         alt="Logo" 
-                         class="h-12 w-auto object-contain shadow-sm group-hover:rotate-6 transition-transform duration-500">
+                    <img src="/assets/images/logo.png" alt="Logo" class="h-12 w-auto object-contain shadow-sm group-hover:rotate-6 transition-transform duration-500">
                 </a>
 
                 <!-- Mobile Toggle Button -->
                 <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-full hover:bg-black/5 transition-colors magnetic-btn active:bg-black/10">
-                    <i data-lucide="menu" id="menu-icon" class="w-7 h-7 text-[#0C2340] transition-all duration-300"></i>
-                    <i data-lucide="x" id="close-icon" class="w-7 h-7 text-[#0C2340] hidden transition-all duration-300"></i>
+                    <svg id="menu-icon" class="w-7 h-7 text-[#0C2340] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg id="close-icon" class="w-7 h-7 text-[#0C2340] hidden transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
 
             <!-- Desktop Nav (Hidden on Mobile) -->
             <nav class="hidden lg:flex items-center gap-1">
-                <a href="/home/" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="home">Home</a>
-                <a href="/about/" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link whitespace-nowrap" data-target="about">About Us</a>
-                <a href="/programs/" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="programs">Programs</a>
+                <a href="/home/" class="px-5 py-2.5 rounded-full text-[13px] font-bold hover:bg-black/5 transition-all nav-link text-[#86868B]" data-target="home">Home</a>
+                <a href="/about/" class="px-5 py-2.5 rounded-full text-[13px] font-bold hover:bg-black/5 transition-all nav-link whitespace-nowrap text-[#86868B]" data-target="about">About Us</a>
+                <a href="/programs/" class="px-5 py-2.5 rounded-full text-[13px] font-bold hover:bg-black/5 transition-all nav-link text-[#86868B]" data-target="programs">Programs</a>
                 <a href="/contact/" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#0C2340] hover:bg-black/5 transition-all nav-link" data-target="contact">Contact</a>
                 <a href="https://square.link/u/OQowKsqR" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full text-[13px] font-bold text-[#86868B] hover:text-[#0C2340] hover:bg-black/5 transition-all">Donate</a>
             </nav>
@@ -261,7 +255,7 @@
                     <a href="/about/" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="about">About Us</a>
                     <a href="/programs/" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="programs">Programs</a>
                     <a href="https://square.link/u/OQowKsqR" target="_blank" rel="noopener noreferrer" class="nav-mobile-link block py-3 text-lg font-bold text-[#D4AF37] hover:bg-black/5 rounded-xl">Donate</a>
-                    <a href="/contact/" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl" data-target="contact">Contact</a>
+                    <a href="/contact/" class="nav-mobile-link block py-3 text-lg font-bold text-[#0C2340] hover:bg-black/5 rounded-xl bg-black/5" data-target="contact">Contact</a>
                 </nav>
             </div>
         </div>
@@ -271,7 +265,7 @@
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4" onclick="closeLightbox()">
         <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
         <button class="absolute top-6 right-6 text-white hover:text-[#D4AF37] transition-colors p-2 bg-black/50 rounded-full">
-            <i data-lucide="x" class="w-8 h-8"></i>
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
         <p class="absolute bottom-6 left-0 right-0 text-center text-white/70 text-sm pointer-events-none">Click anywhere to close</p>
     </div>
@@ -280,20 +274,20 @@
     <main id="main-content" class="pt-32 relative z-10">
         
         <!-- HOME VIEW -->
-        <div id="home-view" class="page-view flex flex-col items-center">
+        <div id="home-view" class="page-view flex flex-col items-center hidden">
             
             <!-- Hero Section (Intro Sequence) -->
             <section class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 mb-16 relative min-h-[85vh] flex items-center justify-center">
                 
                 <!-- Video Intro Layer -->
-                <div id="hero-video-wrapper" class="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white">
+                <div id="hero-video-wrapper" class="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl z-0 transition-opacity duration-[2000ms] bg-white opacity-0">
                     <video id="intro-video" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none" style="transform: scale(1.28); transform-origin: center;">
                         <source src="/assets/videos/hero-video.mov" type="video/mp4">
                     </video>
-</div>
+                </div>
 
                 <!-- Text Content Layer (Fades In After Video) -->
-                <div id="hero-content" class="relative z-10 flex flex-col items-center text-center opacity-0 transition-opacity duration-[1500ms] pointer-events-none">
+                <div id="hero-content" class="relative z-10 flex flex-col items-center text-center transition-opacity duration-[1500ms]">
                     <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-[#0C2340] tracking-tight mb-8 leading-[1.2] max-w-5xl mx-auto drop-shadow-sm">
                         Developing individuals and communities through <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0071E3] to-cyan-400">second chance</span> opportunities.
                     </h1>
@@ -322,7 +316,7 @@
                     <!-- Feature Cards (Added shine-card class) -->
                     <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col items-center text-center group shine-card hover:bg-white/80 transition-colors">
                         <div class="w-20 h-20 rounded-3xl bg-[#0071E3] flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-500">
-                            <i data-lucide="users" class="w-10 h-10 text-white"></i>
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-[#0C2340]">Empower Your Future</h3>
                         <p class="text-slate-600 leading-relaxed">Gain new skills and opportunities through our comprehensive programs.</p>
@@ -330,7 +324,7 @@
                     
                     <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col items-center text-center group shine-card hover:bg-white/80 transition-colors delay-100">
                         <div class="w-20 h-20 rounded-3xl bg-[#0071E3] flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-500">
-                            <i data-lucide="heart" class="w-10 h-10 text-white"></i>
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-[#0C2340]">Tailored Support</h3>
                         <p class="text-slate-600 leading-relaxed">Experience programs designed specifically for your unique journey.</p>
@@ -338,7 +332,7 @@
 
                     <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col items-center text-center group shine-card hover:bg-white/80 transition-colors delay-200">
                         <div class="w-20 h-20 rounded-3xl bg-[#0071E3] flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-500">
-                            <i data-lucide="lightbulb" class="w-10 h-10 text-white"></i>
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-[#0C2340]">Innovative Solutions</h3>
                         <p class="text-slate-600 leading-relaxed">Utilize integrated services to enhance your path to reintegration.</p>
@@ -346,7 +340,7 @@
 
                     <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col items-center text-center group shine-card hover:bg-white/80 transition-colors delay-300">
                         <div class="w-20 h-20 rounded-3xl bg-[#0071E3] flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-500">
-                            <i data-lucide="building-2" class="w-10 h-10 text-white"></i>
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-[#0C2340]">Community Engagement</h3>
                         <p class="text-slate-600 leading-relaxed">Connect with true mentorship for your growth and stability.</p>
@@ -422,7 +416,7 @@
         </div>
 
         <!-- ABOUT VIEW -->
-        <div id="about-view" class="page-view hidden fade-in-up">
+        <div id="about-view" class="page-view hidden">
             <section class="w-full max-w-[1400px] mx-auto px-4 py-24 text-center">
                 <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340]">About 52 Weeks Development</h1>
                 <p class="text-2xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed">
@@ -459,7 +453,7 @@
         </div>
 
         <!-- PROGRAMS VIEW -->
-        <div id="programs-view" class="page-view hidden fade-in-up">
+        <div id="programs-view" class="page-view hidden">
             <section class="w-full max-w-[1400px] mx-auto px-4 py-24 text-center">
                 <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340]">Our Programs</h1>
                 <p class="text-2xl text-slate-600 max-w-4xl mx-auto font-medium">Redeveloping individuals and communities through second chance opportunities.</p>
@@ -515,7 +509,7 @@
                     <!-- Summary Card 1 -->
                     <div class="glass-panel p-8 rounded-[2rem] text-center shine-card">
                          <div class="w-16 h-16 rounded-2xl bg-[#0071E3] flex items-center justify-center mb-6 mx-auto shadow-lg shadow-blue-500/30">
-                            <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-[#0C2340]">Workforce Development</h3>
                         <p class="text-slate-600 text-sm">Job training and apprenticeships for high-demand careers.</p>
@@ -523,7 +517,7 @@
                     <!-- Summary Card 3 -->
                     <div class="glass-panel p-8 rounded-[2rem] text-center shine-card">
                          <div class="w-16 h-16 rounded-2xl bg-[#0071E3] flex items-center justify-center mb-6 mx-auto shadow-lg shadow-blue-500/30">
-                            <i data-lucide="heart" class="w-8 h-8 text-white"></i>
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-[#0C2340]">Mental Health</h3>
                         <p class="text-slate-600 text-sm">Trauma-informed counseling for emotional wellbeing.</p>
@@ -531,7 +525,7 @@
                     <!-- Summary Card 4 -->
                     <div class="glass-panel p-8 rounded-[2rem] text-center shine-card">
                          <div class="w-16 h-16 rounded-2xl bg-[#0071E3] flex items-center justify-center mb-6 mx-auto shadow-lg shadow-blue-500/30">
-                            <i data-lucide="graduation-cap" class="w-8 h-8 text-white"></i>
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-[#0C2340]">Education</h3>
                         <p class="text-slate-600 text-sm">GED preparation and vocational certifications.</p>
@@ -644,7 +638,7 @@
         </div>
 
         <!-- CONTACT VIEW -->
-        <div id="contact-view" class="page-view hidden fade-in-up">
+        <div id="contact-view" class="page-view fade-in-up">
             <section class="w-full max-w-[1400px] mx-auto px-4 py-24 text-center">
                 <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-8 text-[#0C2340]">Contact Us</h1>
                 <p class="text-2xl text-slate-600 max-w-3xl mx-auto font-medium">We're here to help you get involved.</p>
@@ -658,31 +652,31 @@
                         <div class="space-y-10">
                             <div>
                                 <div class="w-16 h-16 rounded-2xl bg-[#0071E3] flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30">
-                                    <i data-lucide="map-pin" class="w-8 h-8 text-white"></i>
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                                 </div>
                                 <p class="font-bold text-xl text-[#0C2340]">Broward & Dade Counties</p>
                             </div>
                             <div>
                                 <div class="w-16 h-16 rounded-2xl bg-[#0071E3] flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30">
-                                    <i data-lucide="mail" class="w-8 h-8 text-white"></i>
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                                 </div>
                                 <a href="mailto:waine@52weeks.dev" class="text-[#0C2340] font-bold text-xl hover:text-[#D4AF37] transition-colors">waine@52weeks.dev</a>
                             </div>
                             <div>
                                 <div class="w-16 h-16 rounded-2xl bg-[#0071E3] flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30">
-                                    <i data-lucide="phone" class="w-8 h-8 text-white"></i>
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                                 </div>
                                 <a href="tel:9546965494" class="text-[#0C2340] font-bold text-xl hover:text-[#D4AF37] transition-colors">(954) 696-5494</a>
                             </div>
                             <div>
                                 <div class="w-16 h-16 rounded-2xl bg-[#0071E3] flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30">
-                                    <i data-lucide="globe" class="w-8 h-8 text-white"></i>
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 </div>
                                 <a href="https://www.52weeks.dev" target="_blank" rel="noopener noreferrer" class="text-[#0C2340] font-bold text-xl hover:text-[#D4AF37] transition-colors">www.52weeks.dev</a>
                             </div>
                              <div>
                                 <div class="w-16 h-16 rounded-2xl bg-[#0071E3] flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/30">
-                                    <i data-lucide="clock" class="w-8 h-8 text-white"></i>
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 </div>
                                 <h3 class="font-bold text-xl text-[#0C2340] mb-1">Office Hours</h3>
                                 <p class="text-slate-600">Monday – Friday: 9:00 AM – 6:00 PM</p>
@@ -699,11 +693,11 @@
                     <!-- Form Card -->
                     <div class="glass-panel p-12 md:p-16 rounded-[3rem] shadow-2xl text-center shine-card">
                         <h2 class="text-3xl font-bold mb-10 text-[#0C2340]">Send a Message</h2>
-                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
-                            <input type="text" id="name" required placeholder="Name" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
-                            <input type="email" id="email" required placeholder="Email" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
-                            <input type="tel" id="phone" placeholder="Phone" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
-                            <textarea id="message" required rows="4" placeholder="How can we help?" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 resize-none transition-all hover:bg-white/80 focus:bg-white"></textarea>
+                        <form id="contact-form" class="space-y-6">
+                            <input type="text" id="name" name="name" required placeholder="Name" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
+                            <input type="email" id="email" name="email" required placeholder="Email" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
+                            <textarea id="message" name="message" required rows="4" placeholder="How can we help?" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 resize-none transition-all hover:bg-white/80 focus:bg-white"></textarea>
                             
                             <button type="submit" class="w-full magnetic-btn bg-[#0C2340] text-white font-bold text-xl py-5 rounded-2xl hover:bg-[#D4AF37] hover:text-[#0C2340] transition-all shadow-xl btn-brand">
                                 Send Message
@@ -720,7 +714,7 @@
                     <div class="glass-panel rounded-[2rem] p-8 cursor-pointer hover:bg-white/90 transition-all shine-card" onclick="toggleAccordion('faq1')">
                         <div class="flex justify-between items-center font-bold text-xl text-[#0C2340]">
                             <span>How can I apply for your programs?</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 transition-transform"></i>
+                            <svg class="w-6 h-6 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
                         <div id="faq1" class="accordion-content">
                             <div class="accordion-inner pt-6 text-slate-600 text-lg leading-relaxed">Please contact us directly using the form above or call our office to begin the application process. We will guide you through the necessary steps.</div>
@@ -729,7 +723,7 @@
                     <div class="glass-panel rounded-[2rem] p-8 cursor-pointer hover:bg-white/90 transition-all shine-card" onclick="toggleAccordion('faq2')">
                         <div class="flex justify-between items-center font-bold text-xl text-[#0C2340]">
                             <span>Do you offer services for family members of justice-involved individuals?</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 transition-transform"></i>
+                            <svg class="w-6 h-6 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
                         <div id="faq2" class="accordion-content">
                             <div class="accordion-inner pt-6 text-slate-600 text-lg leading-relaxed">Yes, we believe in a holistic approach and can provide resources and referrals for family members.</div>
@@ -738,7 +732,7 @@
                     <div class="glass-panel rounded-[2rem] p-8 cursor-pointer hover:bg-white/90 transition-all shine-card" onclick="toggleAccordion('faq3')">
                         <div class="flex justify-between items-center font-bold text-xl text-[#0C2340]">
                             <span>How can businesses partner with 52 Weeks Development?</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 transition-transform"></i>
+                            <svg class="w-6 h-6 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
                         <div id="faq3" class="accordion-content">
                             <div class="accordion-inner pt-6 text-slate-600 text-lg leading-relaxed">We are always looking for partners for apprenticeships and job placement. Please reach out via email to discuss partnership opportunities.</div>
@@ -747,7 +741,7 @@
                     <div class="glass-panel rounded-[2rem] p-8 cursor-pointer hover:bg-white/90 transition-all shine-card" onclick="toggleAccordion('faq4')">
                         <div class="flex justify-between items-center font-bold text-xl text-[#0C2340]">
                             <span>Is my donation tax-deductible?</span>
-                            <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 transition-transform"></i>
+                            <svg class="w-6 h-6 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </div>
                         <div id="faq4" class="accordion-content">
                             <div class="accordion-inner pt-6 text-slate-600 text-lg leading-relaxed">Yes, 52 Weeks Development is a registered non-profit organization, and your donations are tax-deductible.</div>
@@ -787,15 +781,15 @@
                 <div class="flex flex-col items-center md:items-start gap-6">
                     <a href="https://square.link/u/OQowKsqR" target="_blank" class="magnetic-btn bg-[#0C2340] text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-[#D4AF37] hover:text-[#0C2340] transition-colors shadow-lg">Donate Now</a>
                     <div class="flex gap-6">
-                        <a href="https://instagram.com/52weeksdev" target="_blank" class="text-slate-400 hover:text-[#D4AF37] hover:scale-110 transition-all"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="https://instagram.com/52weeksdev" target="_blank" class="text-slate-400 hover:text-[#D4AF37] hover:scale-110 transition-all"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
                         <a href="https://x.com/52weeksdev" target="_blank" class="text-slate-400 hover:text-[#D4AF37] hover:scale-110 transition-all">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.53 7.46L22 22h-6.76l-4.72-6.2L4.8 22H2l6.98-7.97L2.5 2h6.85l4.21 5.6L18.244 2z"></path></svg>
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.53 7.46L22 22h-6.76l-4.72-6.2L4.8 22H2l6.98-7.97L2.5 2h6.85l4.21 5.6L18.244 2z"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="border-t border-slate-200/50 mt-16 pt-10 text-center text-xs font-medium text-slate-400">
-                &copy; <span id="year"></span> 52 Weeks Development. All rights reserved.
+                © <span id="year">2026</span> 52 Weeks Development. All rights reserved.
             </div>
         </div>
     </footer>
@@ -1003,9 +997,10 @@
             }, 300); // Matches CSS transition duration
         }
 
-        // Contact Form
-        function handleFormSubmit(event) {
-            if (event && event.preventDefault) event.preventDefault();
+        // Contact Form - FIXED VERSION
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
@@ -1013,8 +1008,12 @@
             
             const subject = encodeURIComponent(`New Contact from ${name}`);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`);
+            
+            // Open mailto link
             window.location.href = `mailto:waine@52weeks.dev?subject=${subject}&body=${body}`;
-        }
+            
+            return false;
+        });
 
         // Set Home Active initially
         const homeLink = document.querySelector('[data-target="home"]');
@@ -1022,8 +1021,7 @@
             homeLink.classList.remove('text-[#86868B]');
             homeLink.classList.add('text-[#0C2340]');
         }
-    
-</script>
+    </script>
 
 <script>
 (function(){
