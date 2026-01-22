@@ -999,22 +999,30 @@
 
         // Contact Form - FIXED VERSION
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            const subject = encodeURIComponent(`New Contact from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`);
-            
-            // Open mailto link
-            window.location.href = `mailto:waine@52weeks.dev?subject=${subject}&body=${body}`;
-            
-            return false;
-        });
+                        e.preventDefault();
 
+                        const name = document.getElementById('name').value;
+                        const email = document.getElementById('email').value;
+                        const phone = document.getElementById('phone').value;
+                        const message = document.getElementById('message').value;
+
+                        const subject = encodeURIComponent(`New Contact from ${name}`);
+                        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage: ${message}`);
+
+                        // Create a temporary anchor element and click it
+                        const mailtoLink = document.createElement('a');
+                        mailtoLink.href = `mailto:waine@52weeks.dev?subject=${subject}&body=${body}`;
+                        mailtoLink.style.display = 'none';
+                        document.body.appendChild(mailtoLink);
+                        mailtoLink.click();
+
+                        // Clean up
+                        setTimeout(() => {
+                                            document.body.removeChild(mailtoLink);
+                        }, 100);
+
+                        return false;
+        });
         // Set Home Active initially
         const homeLink = document.querySelector('[data-target="home"]');
         if (homeLink) {
@@ -1041,3 +1049,4 @@
 
 </body>
 </html>
+
