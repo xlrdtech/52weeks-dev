@@ -693,15 +693,23 @@
                     <!-- Form Card -->
                     <div class="glass-panel p-12 md:p-16 rounded-[3rem] shadow-2xl text-center shine-card">
                         <h2 class="text-3xl font-bold mb-10 text-[#0C2340]">Send a Message</h2>
-                        <form id="contact-form" class="space-y-6">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-6">
+                            <!-- Web3Forms Access Key -->
+                            <input type="hidden" name="access_key" value="9a79121c-64a2-4f8f-af9c-c540bc22b2af">
+                            <!-- Honeypot Spam Protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                             <input type="text" id="name" name="name" required placeholder="Name" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
                             <input type="email" id="email" name="email" required placeholder="Email" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
                             <input type="tel" id="phone" name="phone" placeholder="Phone" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 transition-all hover:bg-white/80 focus:bg-white">
                             <textarea id="message" name="message" required rows="4" placeholder="How can we help?" class="w-full px-8 py-5 rounded-2xl bg-white/50 border border-white/50 focus:ring-4 focus:ring-[#0C2340]/20 outline-none text-lg placeholder:text-slate-400 resize-none transition-all hover:bg-white/80 focus:bg-white"></textarea>
-                            
+
                             <button type="submit" class="w-full magnetic-btn bg-[#0C2340] text-white font-bold text-xl py-5 rounded-2xl hover:bg-[#D4AF37] hover:text-[#0C2340] transition-all shadow-xl btn-brand">
                                 Send Message
                             </button>
+
+                            <!-- Success/Error Messages -->
+                            <div id="form-result" class="hidden p-4 rounded-2xl text-lg font-semibold"></div>
                         </form>
                     </div>
                 </div>
@@ -997,38 +1005,59 @@
             }, 300); // Matches CSS transition duration
         }
 
-        // Contact Form - FIXED VERSION
-        // Contact Form - DEBUG VERSION
+        // Contact Form - Web3Forms Integration
                 document.addEventListener('DOMContentLoaded', function() {
-                                console.log('DOM loaded, looking for form...');
                                 const form = document.getElementById('contact-form');
-                                
+                                const result = document.getElementById('form-result');
+
                                 if (!form) {
                                                     console.error('ERROR: contact-form not found!');
                                                     return;
                                 }
-                                
-                                console.log('Form found! Attaching event listener...');
-                                
-                                form.addEventListener('submit', function(e) {
+
+                                form.addEventListener('submit', async function(e) {
                                                     e.preventDefault();
-                                                    console.log('Form submitted!');
-                                                    
-                                                    const name = document.getElementById('name').value;
-                                                    const email = document.getElementById('email').value;
-                                                    const phone = document.getElementById('phone').value;
-                                                    const message = document.getElementById('message').value;
-                                                    
-                                                    console.log('Form data:', { name, email, phone, message });
-                                                    
-                                                    const subject = encodeURIComponent(`New Contact from ${name}`);
-                                                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage: ${message}`);
-                                                    const mailtoUrl = `mailto:waine@52weeks.dev?subject=${subject}&body=${body}`;
-                                                    
-                                                    console.log('Opening mailto:', mailtoUrl.substring(0, 100) + '...');
-                                                    
-                                                    // Use window.location.href as the simple approach
-                                                    window.location.href = mailtoUrl;
+
+                                                    const formData = new FormData(form);
+                                                    const object = Object.fromEntries(formData);
+                                                    const json = JSON.stringify(object);
+
+                                                    result.textContent = "Please wait...";
+                                                    result.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+                                                    result.classList.add('bg-blue-100', 'text-blue-800');
+
+                                                    try {
+                                                        const response = await fetch('https://api.web3forms.com/submit', {
+                                                            method: 'POST',
+                                                            headers: {
+                                                                'Content-Type': 'application/json',
+                                                                'Accept': 'application/json'
+                                                            },
+                                                            body: json
+                                                        });
+
+                                                        const data = await response.json();
+
+                                                        if (response.status === 200) {
+                                                            result.textContent = data.message || 'Thank you! Your message has been sent successfully.';
+                                                            result.classList.remove('bg-blue-100', 'text-blue-800');
+                                                            result.classList.add('bg-green-100', 'text-green-800');
+                                                            form.reset();
+                                                        } else {
+                                                            result.textContent = data.message || 'Something went wrong. Please try again.';
+                                                            result.classList.remove('bg-blue-100', 'text-blue-800');
+                                                            result.classList.add('bg-red-100', 'text-red-800');
+                                                        }
+                                                    } catch (error) {
+                                                        console.error('Error:', error);
+                                                        result.textContent = 'Something went wrong! Please try again.';
+                                                        result.classList.remove('bg-blue-100', 'text-blue-800');
+                                                        result.classList.add('bg-red-100', 'text-red-800');
+                                                    }
+
+                                                    setTimeout(() => {
+                                                        result.classList.add('hidden');
+                                                    }, 5000);
                                 });
                                 
                                 console.log('Event listener attached successfully!');
